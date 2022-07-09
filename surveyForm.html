@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+<head>
+    <meta charset = "utf-8">
+    <title>Survey Form</title>
+    <link rel = "stylesheet" href = "css\survey.css"/>
+</head>
+<body>
+    <h1>Survey</h1>
+    <form class = "survey-form" action = "https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method = "post">
+        <fieldset>
+            <legend>Your information</legend>
+            <div>
+                <label for ="firstname">First Name: </label><input type = "text" id = "firstname" name ="firstname" placeholder = "your first name"/>
+            </div>
+            <div>
+                <label for ="lastname">Last name: </label><input type = "text" name ="lastname" id = "lastname" placeholder = "your last name"/>
+            </div>
+            <div>
+            <label for = "email"> Your email: </label><input type ="text" name ="email" id = "email" placeholder ="Your email"/>
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>Survey Questions</legend>
+            <div>
+                Favorite sport: 
+                <input id = "baseball" type =  "radio" name = "sport" value = "baseball"/> <label for = "baseball"> baseball </label>
+                <input id = "rugby" type = "radio" name = "sport" Value = "rugby"/> <label for = "rugby"> rugby </label>
+                <input type = "radio" id = "snowboarding" name = "sport" value = "snowboarding" /> <label for = "snowboarding">Snowboarding</label>
+            </div>
+            <div>
+                Yout pets:
+                <input id = "cat" type = "checkbox" name = "pets" value = "cat"/> <label for = "cat">cat</label>
+                <input id = "dog" type = "checkbox" name = "pets" value = "dog"/> <label for = "dog">dog</label>
+                <input id = "iguana" type = "checkbox" name = "pets" value = "iguana"/> <label for = "iguana">Iguana</label>
+            </div> 
+        
+
+
+        </fieldset>
+        <input type="submit" id = "submit-btn"/>
+    </form>
+</body>
+
+</html>
